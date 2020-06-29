@@ -9,28 +9,35 @@ Backend sample implementation for PostgreSQL.
 yarn install
 ```
 
+## Initial Settings
+1. Check and edit `config/config.json`.
+   <pre>
+   "development": {
+     "username": "{your username}",
+     "password": "{your password}",
+     "database": "{your database name}",
+     "host": "{your database host or 127.0.0.1}",
+     ...
+   },
+   </pre>
+1. Create database.
+   ```
+   yarn sequelize db:create
+   ```
+1. Create tables.
+   ```
+   yarn sequelize db:migrate
+   ```
+
 ## Quick Start
 ```
 yarn serve
 ```
 
 ## Usage
-Request to `http://localhost:3030/{APIs}`.  
+Request to `http://localhost:3000/{APIs}`.  
 Use ex:
 [Advanced REST client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo/details).
 
 ## APIs
 Check `index.ts`.
-
-## Settings
-Check and edit `config/config.json`.
-
-<pre>
-  "development": {
-    "username": "{your username}",
-    "password": "{your password}",
-    "database": "{your database name}",
-    "host": "{your database host or 127.0.0.1}",
-    ...
-  },
-</pre>
